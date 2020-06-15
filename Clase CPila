@@ -52,9 +52,8 @@ public class CPila {
         if(this.siestaVacia()){
             System.out.println("La pila esta vacia ");
         }else{
-            int item = this.pila[this.tope - 1];
+            pila[this.tope - 1];
             this.tope--;
-            System.out.println("El item "+ item + " se ha eliminado de la pila");
         }
     }
     
