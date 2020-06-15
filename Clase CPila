@@ -48,6 +48,18 @@ public class CPila {
     public void insertarPila( int pos,String codigo, String nombre,int nota1, int nota2){
         
         pila[pos].registrar(codigo, nombre, nota1, nota2);
+        System.out.println("Ingrese Codigo: ");
+        codigo = entrada.next();
+        alu.setCodigo(codigo);
+        System.out.println("Ingrese nombre: ");
+        codigo = entrada.next();
+        alu.setNombre(nombre);
+        System.out.println("Ingrese Nota 1: ");
+        nota1 = entrada.nextInt();
+        alu.setNota1(nota1);
+        System.out.println("Ingrese Nota 2: ");
+        nota2 = entrada.nextInt();
+        alu.setCodigo(nota2);
         tope++;
     }
     
