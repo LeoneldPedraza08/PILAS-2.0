@@ -39,16 +39,12 @@ public class CPila {
         }
     }
     
-        public void insertarPila(){
+        public void insertar(int pos, int codigo, String nombre, double sueldo){
         if(this.siestaLlena()){
             System.out.println("La pila esta Llena ");
         }else{
-            int item;
-            System.out.println("Ingrese el elemento a ingresar: ");
-            item = entrada.nextInt();
-            this.pila[this.tope] = item;
-            this.tope++;
-            System.out.println("El item " + item + " se inserto a la pila\n");
+        pila[pos].insertar(codigo, nombre, sueldo)
+        }
         }
     }
     
@@ -62,14 +58,13 @@ public class CPila {
         }
     }
     
-        public void mostrarPila(){
+        public void mostrarPromedio(){
         if(this.siestaVacia()){
             System.out.println("No hay nada que mostrar");
         }else{
-            System.out.println("\tElementos de la pila");
-            System.out.println("\t=====================");
-            for(int i = 0; i < this.tope ;i++){
-                System.out.println(this.pila[i] + " <---> ");
+          for(int i = 0; i < 10; i++){
+                total = pila[i].mostrarPromedio();
+            }
             }
         }
     
