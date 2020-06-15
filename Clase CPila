@@ -76,7 +76,7 @@ public class CPila {
         if(this.siestaVacia()){
             System.out.println("No hay nada que mostrar");
         }else{
-             cadena();
+             alu.cadena();
             }
         }
     
