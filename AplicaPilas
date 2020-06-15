@@ -43,16 +43,16 @@ public class CCPila {
                 break;
                 
                 case 2:
-                    
+                    pila.insertarPila();
                 break;
                 
                 case 3:
-                    
+                    pila.eliminarPila();
                     System.out.println("");
                 break;
                 
                 case 4:
-                    
+                    pila.mostrarPila();
                     System.out.println("\n");
                 break;                 
                 
