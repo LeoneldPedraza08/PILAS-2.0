@@ -1,34 +1,35 @@
-package Enunciado01;
+package Enunciado1;
 
-import java.util.Scanner;
 
 public class CPila {
+    int tope = 0,max;
+    CAlumno[] pila; //Arreglo pila de tipo Alumno
+    CAlumno alu = new CAlumno();//objeto de la clase alumno
     
-   Scanner teclado = new Scanner(System.in);
+    public CPila (int max){
+        this.tope = 0;
+        this.max = max;
+        this.pila = new CAlumno[this.max+1];
+        for (int i = 0; i < this.max+1; i++) {
+            pila[i] = new CAlumno();
+        }
+    }
+
+    public CPila() {
+        this.tope = 0;
+        this.max = 4;
+        this.pila = new CAlumno[max+1];
+    }
     
-   int tope, max;
-   CAlumno [] pila; //Declarando arreglo Pila de tipo CAlumno
-   CAlumno alu = new CAlumno(); //Creando un objeto de CAlumno
-   
-   
-   
-   public CPila(int MAX){
-        this.tope = 0;
-        this.max = MAX;
-        this.pila = new CAlumno [this.max + 1];
-    }
-   
-   public CPila(){
-        this.tope = 0;
-        this.max = 100;
-        this.pila = new CAlumno [this.max + 1];
-    }
-   
     public int getTope(){
         return tope;
     }
-   
-   public boolean siestaLlena(){
+     
+    public void vaciarPila(){
+        this.tope = 0;
+    }
+    
+    public boolean siestaLlena(){
         if(this.max == this.tope){
             return true;
         }else{
@@ -44,44 +45,26 @@ public class CPila {
         }
     }
     
-    public void insertaPilar(int pos, int codigo, String nombre, int n1, int n2){
-        if(this.siestaLlena()){
-            System.out.println("La pila esta Llena ");
-        }else{
-        System.out.println("Ingrese codigo");
-        String codigo = teclado.next();
-        alu.setCodigo(codigo)
-         System.out.println("Ingrese nombre");
-        String nombre = teclado.next();
-        alu.setCodigo(nombre)
-        System.out.println("Ingrese nota 1");
-        int n1 = teclado.next();
-        alu.setCodigo(n1)
-        System.out.println("Ingrese nota 2");
-        int n2 = teclado.next();
-        alu.setCodigo(n2)
-        this.tope++;
-        }
+    public void insertarPila( int pos,String codigo, String nombre,int nota1, int nota2){
+        
+        pila[pos].registrar(codigo, nombre, nota1, nota2);
+        tope++;
     }
     
-    public void eliminarPila(){
-        if(this.siestaVacia()){
-            System.out.println("La pila esta vacia ");
-        }else{
-            this.tope--;
-        }
-    }
-    
-        public void mostrarPila(){
-        if(this.siestaVacia()){
-            System.out.println("No hay nada que mostrar");
-        }else{
-             alu.cadena();
+    public void mostrarPila(){
+        if (this.siestaVacia()) 
+            System.out.println("La pila esta vacia no hay elemento que mostrar");
+        else{
+            for (int i = 0; i<tope; i++){
+            pila[i].mostrarDatos();
             }
         }
+    }
+     
+    public void eliminarPila(){
+        if (this.siestaVacia()){
+            System.out.println("La pila ya esta vacia");
+        }else tope--;
+    }
     
-    
-    
-  
-   
 }
