@@ -8,10 +8,19 @@ public class CCPila {
     static Scanner entrada = new Scanner(System.in);
     
     public static void main (String  [] args){
-        menu();
+        menuPila();
         
     }
-    static void menu(){
+    
+    static void creaPila(){
+        int tam;
+        System.out.println("Ingrese Tamaño de la Pila : ");
+        tam = entrada.nextInt();
+        Pila = new CPila(tam);
+        System.out.println("pila creada .......n");
+    }
+    
+    static void menuPila(){
         int opcion;
         do{
             System.out.println("\tMenu de Opciones");
@@ -40,7 +49,7 @@ public class CCPila {
                 case 0:
                     System.exit(0);
                     break;
-                default: JOptionPane.showMessageDialog(null,"Opncion no valida");
+                default: System.out.println(null,"Opncion no valida");
             }
         }while(opcion !=0);
     }
