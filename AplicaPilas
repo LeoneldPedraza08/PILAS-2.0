@@ -43,7 +43,7 @@ public class CCPila {
                 break;
                 
                 case 2:
-                    pila.insertar();
+                    pila.insertarPila();
                 break;
                 
                 case 3:
@@ -52,7 +52,7 @@ public class CCPila {
                 break;
                 
                 case 4:
-                    pila.mostrarPromedio();
+                    pila.mostrarPila();
                     System.out.println("\n");
                 break;                 
                 
