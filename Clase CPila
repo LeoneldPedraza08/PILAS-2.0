@@ -3,8 +3,8 @@ package Enunciado1;
 
 public class CPila {
     int tope = 0,max;
-    CAlumno[] pila; //Arreglo pila de tipo Alumno
-    CAlumno alu = new CAlumno();//objeto de la clase alumno
+    CAlumno[] pila;
+    CAlumno alu = new CAlumno();
     
     public CPila (int max){
         this.tope = 0;
