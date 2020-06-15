@@ -1,0 +1,43 @@
+package Enunciado01;
+
+public class CPila {
+    
+   int tope, max;
+   CAlumno [] pila; //Declarando arreglo Pila de tipo CAlumno
+   CAlumno alu = new CAlumno(); //Creando un objeto de CAlumno
+    
+   
+   public CPila(int MAX){
+        this.tope = 0;
+        this.max = MAX;
+        this.pila = new CAlumno [this.max + 1];
+    }
+   
+   public CPila(){
+        this.tope = 0;
+        this.max = 100;
+        this.pila = new CAlumno [this.max + 1];
+    }
+   
+    public int getTope(){
+        return tope;
+    }
+   
+   public boolean siestaLlena(){
+        if(this.max == this.tope){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public boolean siestaVacia(){
+        if (this.tope == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+  
+   
+}
