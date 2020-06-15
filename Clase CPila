@@ -43,7 +43,7 @@ public class CPila {
         if(this.siestaLlena()){
             System.out.println("La pila esta Llena ");
         }else{
-        pila[pos].insertar(codigo, nombre, sueldo);
+        pila[this.tope].insertar(codigo, nombre, sueldo);
         }
     }
     
