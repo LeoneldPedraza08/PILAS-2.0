@@ -27,8 +27,8 @@ public class CCPila {
             System.out.println("================");
             System.out.println("[1] Crear Pila");
             System.out.println("=============");
-            System.out.println("[2] Ingresar Datos  - [Apilar]");
-            System.out.println("[3] Eliminar Datos - [Desapilar]");
+            System.out.println("[2] Ingresar Datos ");
+            System.out.println("[3] Eliminar Datos ");
             System.out.println("[4] Mostrar Pila");
                                                                         
             System.out.println("=============");
@@ -43,7 +43,7 @@ public class CCPila {
                 break;
                 
                 case 2:
-                    pila.insertarPila();
+                    pila.insertar();
                 break;
                 
                 case 3:
@@ -52,7 +52,7 @@ public class CCPila {
                 break;
                 
                 case 4:
-                    pila.mostrarPila();
+                    pila.mostrarPromedio();
                     System.out.println("\n");
                 break;                 
                 
