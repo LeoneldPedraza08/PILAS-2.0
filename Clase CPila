@@ -1,24 +1,26 @@
-package Enunciado1;
+package Enunciado01;
 
+import java.util.Scanner;
 
 public class CPila {
-    int tope = 0,max;
-    CAlumno[] pila;
+    
+    static Scanner entrada = new Scanner (System.in);
+    
+    int tope, max;
+    CAlumno [] pila;
     CAlumno alu = new CAlumno();
     
-    public CPila (int max){
+    
+    public CPila (int MAX){
         this.tope = 0;
-        this.max = max;
+        this.max = MAX;
         this.pila = new CAlumno[this.max+1];
-        for (int i = 0; i < this.max+1; i++) {
-            pila[i] = new CAlumno();
-        }
     }
 
     public CPila() {
         this.tope = 0;
-        this.max = 4;
-        this.pila = new CAlumno[max+1];
+        this.max = 100;
+        this.pila = new CAlumno [this.max+1];
     }
     
     public int getTope(){
@@ -45,38 +47,41 @@ public class CPila {
         }
     }
     
-    public void insertarPila( int pos,String codigo, String nombre,int nota1, int nota2){
+    public void insertarPila(){
         
-        pila[pos].registrar(codigo, nombre, nota1, nota2);
         System.out.println("Ingrese Codigo: ");
-        codigo = entrada.next();
+        String codigo = entrada.next();
         alu.setCodigo(codigo);
         System.out.println("Ingrese nombre: ");
-        codigo = entrada.next();
+        String nombre = entrada.next();
         alu.setNombre(nombre);
         System.out.println("Ingrese Nota 1: ");
-        nota1 = entrada.nextInt();
+        int nota1 = entrada.nextInt();
         alu.setNota1(nota1);
         System.out.println("Ingrese Nota 2: ");
-        nota2 = entrada.nextInt();
-        alu.setCodigo(nota2);
+        int nota2 = entrada.nextInt();
+        alu.setNota2(nota2);
+        
         tope++;
     }
     
     public void mostrarPila(){
-        if (this.siestaVacia()) 
+        if (this.siestaVacia()){
             System.out.println("La pila esta vacia no hay elemento que mostrar");
-        else{
-            for (int i = 0; i<tope; i++){
-            pila[i].mostrarDatos();
-            }
+        }else{
+          for (int i = 0; i < this.tope; i++){
+            System.out.println(alu.cadena());
+          }
         }
     }
      
     public void eliminarPila(){
         if (this.siestaVacia()){
             System.out.println("La pila ya esta vacia");
-        }else tope--;
+        }else{
+            
+            tope--;
+        }
     }
     
 }
