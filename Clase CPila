@@ -56,13 +56,11 @@ public class CPila {
         }
     }
     
-        public void mostrarPromedio(){
+        public void mostrarPila(){
         if(this.siestaVacia()){
             System.out.println("No hay nada que mostrar");
         }else{
-          for(int i = 0; i < 10; i++){
-                total = pila[i].mostrarPromedio();
-            }
+             cadena();
             }
         }
     
