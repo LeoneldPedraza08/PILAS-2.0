@@ -39,11 +39,11 @@ public class CPila {
         }
     }
     
-    public void insertar(int pos, int codigo, String nombre, double sueldo){
+    public void insertar(int pos, int codigo, String nombre, int n1, int n2){
         if(this.siestaLlena()){
             System.out.println("La pila esta Llena ");
         }else{
-        pila[this.tope].insertar(codigo, nombre, sueldo);
+        pila[this.tope].insertar(codigo, nombre, n1, n2);
         }
     }
     
